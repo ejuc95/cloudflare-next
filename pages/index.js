@@ -31,7 +31,7 @@ export default function Home ({ data, page, count }) {
 
 export async function getServerSideProps (context) {
   const page = parseInt(context.query.page) || 1
-  const { data, loading } = await client.query({
+  const { data } = await client.query({
     query: ALL_CHARACTERS,
     variables: {
       page
